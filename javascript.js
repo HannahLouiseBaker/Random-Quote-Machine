@@ -22,10 +22,10 @@ $(document).ready(function () {
 
     generateQuote();
     var quote = /*#__PURE__*/React.createElement("h1", {
-      class: "text-center my-auto"
+      class: "main-color text-center my-auto"
     }, "\"", quoteString, "\"");
     var author = /*#__PURE__*/React.createElement("p", {
-      class: "font-weight-bold my-auto text-right"
+      class: "main-color font-weight-bold my-auto text-right"
     }, "- ", authorString);
     var tweet = /*#__PURE__*/React.createElement("a", {
       id: "tweet-quote",
@@ -71,6 +71,7 @@ $(document).ready(function () {
 
   generateColor();
   $(".bg-color").css("background-color", color);
+  $(".main-color").css("color", color);
   /*BUTTON FUNCTION*/
 
   /*Change the color when the New Quote button is clicked*/
@@ -78,6 +79,7 @@ $(document).ready(function () {
   $("#new-quote").on("click", function () {
     generateColor();
     $(".bg-color").css("background-color", color);
+    $(".main-color").css("color", color);
   });
 }); //This article was helpful:
 //https://reactjs.org/docs/rendering-elements.html
